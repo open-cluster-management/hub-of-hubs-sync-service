@@ -21,9 +21,9 @@ OpenHorizon edge sync service is used as transport layer in the PoC and have two
     $ export CSS_PORT=...
     ```
     
-1.  Set the `SECURE_LISTENING_PORT` environment variable to hold the ESS https listening port.
+1.  Set the `LISTENING_PORT` environment variable to hold the ESS http listening port.
     ```
-    $ export SECURE_LISTENING_PORT=...
+    $ export LISTENING_PORT=...
     ```
     
 1.  Set the `LH_ID` environment variable to hold a unique leaf-hub id.
