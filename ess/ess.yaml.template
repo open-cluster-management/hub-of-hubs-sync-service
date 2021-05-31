@@ -71,6 +71,8 @@ spec:
               value: "$CSS_PORT"
             - name: DESTINATION_ID
               value: "$LH_ID"
+            - name: SECURE_LISTENING_PORT
+              value: "$SECURE_LISTENING_PORT"
 ---
 
 apiVersion: v1
@@ -82,7 +84,7 @@ metadata:
     name: sync-service-ess
 spec:
   ports:
-  - port: 8443
+  - port: $SECURE_LISTENING_PORT
     name: https-port
   selector:
     name: sync-service-ess
