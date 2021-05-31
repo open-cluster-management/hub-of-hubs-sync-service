@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sync-service
+  labels:
+    name: sync-service
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: sync-service-ess
+  namespace: sync-service
+rules:
+- apiGroups:
+  - security.openshift.io
+  resourceNames:
+  - anyuid
+  resources:
+  - securitycontextconstraints
+  verbs:
+  - use
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sync-service-ess
+  namespace: sync-service
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: sync-service-ess
+  namespace: sync-service
+subjects:
+- kind: ServiceAccount
+  name: sync-service-ess
+roleRef:
+  kind: Role
+  name: sync-service-ess
+  apiGroup: rbac.authorization.k8s.io
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sync-service-ess
+  namespace: sync-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: sync-service-ess
+  template:
+    metadata:
+      labels:
+        name: sync-service-ess
+    spec:
+      serviceAccountName: sync-service-ess
+      containers:
+        - name: ess
+          image: nirrozenbaumibm/leaf-hub-sync-service-ess:latest-dev
+          imagePullPolicy: Always
+          env:
+            - name: HTTPCSSHost
+              value: "$CSS_HOST"
+            - name: HTTPCSSPort
+              value: "$CSS_PORT"
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: sync-service-ess
+  namespace: sync-service
+  labels:
+    name: sync-service-ess
+spec:
+  ports:
+  - port: 8443
+    name: https-port
+  selector:
+    name: sync-service-ess
+---
