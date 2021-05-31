@@ -69,6 +69,8 @@ spec:
               value: "$CSS_HOST"
             - name: HTTPCSSPort
               value: "$CSS_PORT"
+            - name: DESTINATION_ID
+              value: "$LH_ID"
 ---
 
 apiVersion: v1

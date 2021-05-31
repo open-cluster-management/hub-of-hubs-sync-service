@@ -21,6 +21,11 @@ OpenHorizon edge sync service is used as transport layer in the PoC and have two
     $ export CSS_PORT=...
     ```
     
+1.  Set the `LH_ID` environment variable to hold a unique leaf-hub id.
+    ```
+    $ export LH_ID=...
+    ```
+    
 1.  Run the following command to deploy the ESS to your leaf hub cluster:  
     ```
     envsubst < ess/ess.yaml.template | kubectl apply -f -
