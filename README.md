@@ -36,11 +36,6 @@ OpenHorizon edge sync service is used as transport layer in the PoC and have two
     envsubst < ess/ess.yaml.template | kubectl apply -f -
     ```
     
-1.  Run the following command to expose sync service:
-    ```
-    oc expose service sync-service-ess -n $NAMESPACE
-    ```
-    
 edge-sync-service ESS k8s objects will be created under the namespace `sync-service`.
     
 #### Cleanup of ESS from a leaf hub
