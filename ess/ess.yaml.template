@@ -76,7 +76,7 @@ spec:
             - name: UNSECURE_LISTENING_PORT
               value: "$LISTENING_PORT"
             - name: HTTP_POLLING_INTERVAL
-              value: 5
+              value: "5"
 ---
 
 apiVersion: v1
