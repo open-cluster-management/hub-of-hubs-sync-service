@@ -8,21 +8,21 @@ import (
 )
 
 const (
-	envSyncServiceHost = "SYNC_SERVICE_HOST"
-	envSyncServicePort = "SYNC_SERVICE_PORT"
-	envSyncServiceOrgId = "SYNC_SERVICE_ORG_ID"
-	envSyncServiceAppKey = "SYNC_SERVICE_APP_KEY"
-	envSyncServiceLeafHubName = "SYNC_SERVICE_LEAF_HUB_NAME"
+	envSyncServiceHost          = "SYNC_SERVICE_HOST"
+	envSyncServicePort          = "SYNC_SERVICE_PORT"
+	envSyncServiceOrgId         = "SYNC_SERVICE_ORG_ID"
+	envSyncServiceAppKey        = "SYNC_SERVICE_APP_KEY"
+	envSyncServiceLeafHubName   = "SYNC_SERVICE_LEAF_HUB_NAME"
 	envSyncServiceNumOfLeafHubs = "SYNC_SERVICE_NUM_OF_LEAF_HUBS"
 
 	serverProtocol = "http"
 
-	StatusBundle = "StatusBundle"
-	ManagedClustersMsgKey = "ManagedClusters"
-	ClustersPerPolicyMsgKey = "ClustersPerPolicy"
-	PolicyComplianceMsgKey = "PolicyCompliance"
+	StatusBundle                  = "StatusBundle"
+	ManagedClustersMsgKey         = "ManagedClusters"
+	ClustersPerPolicyMsgKey       = "ClustersPerPolicy"
+	PolicyComplianceMsgKey        = "PolicyCompliance"
 	MinimalPolicyComplianceMsgKey = "MinimalPolicyCompliance"
-	ControlInfoMsgKey = "ControlInfo"
+	ControlInfoMsgKey             = "ControlInfo"
 )
 
 // Clean cleans SynService storage.
@@ -87,8 +87,6 @@ func Clean() {
 	for i := 0; i <= numOfLeafHubs; i++ {
 		clean(syncServiceClient, fmt.Sprintf("%s_simulated_%d", leafHubName, i))
 	}
-
-	fmt.Printf("old data has been cleaned\n")
 }
 
 func clean(client *client.SyncServiceClient, leafHubName string) {
