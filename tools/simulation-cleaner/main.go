@@ -1,4 +1,4 @@
-package syncservicecleaner
+package main
 
 import (
 	"fmt"
@@ -26,8 +26,8 @@ const (
 	controlInfoMsgKey             = "ControlInfo"
 )
 
-// Clean cleans SynService storage.
-func Clean() {
+// clean cleans SynService storage.
+func clean() {
 	host, found := os.LookupEnv(envSyncServiceHost)
 	if !found {
 		fmt.Printf("Environment variable %s not found\n", envSyncServiceHost)
@@ -83,14 +83,14 @@ func Clean() {
 
 	fmt.Printf("cleaning old data\n")
 
-	clean(syncServiceClient, leafHubName)
+	cleanObjects(syncServiceClient, leafHubName)
 
 	for i := 0; i <= numOfLeafHubs; i++ {
-		clean(syncServiceClient, fmt.Sprintf("%s_simulated_%d", leafHubName, i))
+		cleanObjects(syncServiceClient, fmt.Sprintf("%s_simulated_%d", leafHubName, i))
 	}
 }
 
-func clean(client *client.SyncServiceClient, leafHubName string) {
+func cleanObjects(client *client.SyncServiceClient, leafHubName string) {
 	objectIDs := make([]string, 0)
 
 	objectIDs = append(objectIDs, fmt.Sprintf("%s.%s", leafHubName, managedClustersMsgKey))
@@ -106,4 +106,8 @@ func clean(client *client.SyncServiceClient, leafHubName string) {
 			fmt.Printf("successfuly cleaned old data for %s, %s\n", leafHubName, objectID)
 		}
 	}
+}
+
+func main() {
+	clean()
 }
