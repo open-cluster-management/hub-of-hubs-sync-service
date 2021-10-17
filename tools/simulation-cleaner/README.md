@@ -1,6 +1,6 @@
-# Hub-of-Hubs-sync-service examples
+# Hub-of-Hubs-sync-service-simulation-cleaner
 
-This package contains instructions how to build and run sync service storage cleaner 
+This package contains instructions how to build and run sync service simulation storage cleaner 
 
 1. Build the example by running the following command: `make`
 
