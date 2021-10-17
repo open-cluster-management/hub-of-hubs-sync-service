@@ -1,4 +1,4 @@
-module hohSyncService
+module simulation-cleaner
 
 go 1.16
 

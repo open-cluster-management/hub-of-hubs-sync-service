@@ -36,5 +36,5 @@ This package contains instructions how to build and run sync service storage cle
 
 1. Run the following command to clean sync service storage:  
     ```
-    ./bin/hub-of-hubs-sync-service
+    ./bin/simulation-cleaner
     ```

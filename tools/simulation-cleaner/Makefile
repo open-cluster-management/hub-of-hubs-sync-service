@@ -36,7 +36,7 @@ clean-vendor:
 
 .PHONY: build			##builds the controller
 build:
-	@go build -o bin/${COMPONENT} examples/main.go
+	@go build -o bin/${COMPONENT} main.go
 
 .PHONY: clean			##cleans the build directories
 clean:
