@@ -1,4 +1,4 @@
-# Hub-of-Hubs-sync-service-simulation-cleaner
+# simulation-cleaner
 
 This package contains instructions how to build and run sync service simulation storage cleaner 
 
@@ -14,24 +14,14 @@ This package contains instructions how to build and run sync service simulation 
     $ export SYNC_SERVICE_PORT=...
     ```
     
-1. Set the `SYNC_SERVICE_ORG_ID` environment variable to hold the CSS organization id.
+1. Set the `LH_ID` environment variable to hold the leaf hub unique id as used in the simulation.
     ```
-    $ export SYNC_SERVICE_ORG_ID=...
-    ```
-
-1. Set the `SYNC_SERVICE_APP_KEY` environment variable to hold the CSS application key.
-    ```
-    $ export SYNC_SERVICE_APP_KEY=...
-    ```
-    
-1. Set the `SYNC_SERVICE_LEAF_HUB_NAME` environment variable to hold the name of the leaf hub used in the simulation.
-    ```
-    $ export SYNC_SERVICE_LEAF_HUB_NAME=...
+    $ export LH_ID=...
     ```
 
-1. Set the `SYNC_SERVICE_NUM_OF_LEAF_HUBS` environment variable to hold the total number of leaf hubs used in the simulation.
+1. Set the `NUMBER_OF_SIMULATED_LEAF_HUBS` environment variable to hold the number of simulated leaf hubs (not including the original leaf hub).
     ```
-    $ export SYNC_SERVICE_NUM_OF_LEAF_HUBS=...
+    $ export NUMBER_OF_SIMULATED_LEAF_HUBS=...
     ```  
 
 1. Run the following command to clean sync service storage:  
