@@ -27,7 +27,7 @@ var (
 	errWrongVarType   = errors.New("environment variable is not an integer")
 )
 
-// clean cleans SynService storage.
+// cleans SynService storage.
 func main() {
 	host, port, leafHubName, numOfSimulatedLeafHubs, err := readEnvVars()
 	if err != nil {
@@ -38,8 +38,6 @@ func main() {
 
 	syncServiceClient.SetOrgID(orgID)
 	syncServiceClient.SetAppKeyAndSecret(appKey, "")
-
-	log.Println("cleaning old data")
 
 	cleanObjects(syncServiceClient, leafHubName)
 
@@ -83,6 +81,8 @@ func readEnvVars() (string, uint16, string, int, error) {
 }
 
 func cleanObjects(client *client.SyncServiceClient, leafHubName string) {
+	log.Println(fmt.Sprintf("cleaning old data of leaf hub - %s", leafHubName))
+
 	objectIDs := []string{
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.ManagedClustersMsgKey),
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.ClustersPerPolicyMsgKey),
@@ -96,9 +96,9 @@ func cleanObjects(client *client.SyncServiceClient, leafHubName string) {
 
 	for _, objectID := range objectIDs {
 		if err := client.DeleteObject(datatypes.StatusBundle, objectID); err != nil {
-			log.Println(fmt.Sprintf("failed to clean old data for %s, %s, %v", leafHubName, objectID, err))
+			log.Println(fmt.Sprintf("failed to clean old data for %s, %v", objectID, err))
 		} else {
-			log.Println(fmt.Sprintf("successfully cleaned old data for %s, %s", leafHubName, objectID))
+			log.Println(fmt.Sprintf("successfully cleaned old data for %s", objectID))
 		}
 	}
 }
