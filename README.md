@@ -1,5 +1,8 @@
 # Hub-of-Hubs-sync-service
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/open-cluster-management/hub-of-hubs-sync-service)](https://goreportcard.com/report/github.com/open-cluster-management/hub-of-hubs-sync-service)
+[![License](https://img.shields.io/github/license/open-cluster-management/hub-of-hubs-sync-service)](/LICENSE)
+
 This repository contains instructions for how to deploy 
 [OpenHorizon edge sync service](https://github.com/open-horizon/edge-sync-service) 
 components as part of the Hub-of-Hubs PoC.  
