@@ -2,7 +2,7 @@
 
 This package contains instructions how to build and run sync service simulation storage cleaner 
 
-1. Build the example by running the following command: `make`
+1. Build the code by running the following command: `make`
 
 1. Set the `SYNC_SERVICE_HOST` environment variable to hold the CSS host.
     ```
