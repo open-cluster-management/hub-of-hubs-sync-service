@@ -10,6 +10,10 @@ OpenHorizon edge sync service is used as transport layer in the PoC and have two
 1.  Cloud Sync Service (CSS) running in the cloud. In this PoC the CSS runs in the hub of hubs.
 1.  Edge Sync Service (ESS) running in edge nodes. In this PoC the ESS runs in leaf hubs. 
 
+Go to the [Contributing guide](CONTRIBUTING.md) to learn how to get involved.
+
+## Getting Started
+
 ### Edge Sync Service (ESS)
 
 #### Deploy ESS on a leaf hub
