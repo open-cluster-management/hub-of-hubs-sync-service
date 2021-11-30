@@ -62,7 +62,7 @@ spec:
       serviceAccountName: sync-service-ess
       containers:
         - name: ess
-          image: nirrozenbaumibm/leaf-hub-sync-service-ess:latest-dev
+          image: quay.io/open-cluster-management-hub-of-hubs/leaf-hub-sync-service-ess:stable
           imagePullPolicy: Always
           env:
             - name: HTTPCSSHost
