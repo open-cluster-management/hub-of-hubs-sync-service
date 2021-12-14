@@ -86,12 +86,14 @@ func cleanObjects(client *client.SyncServiceClient, leafHubName string) {
 	objectIDs := []string{
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.ManagedClustersMsgKey),
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.ClustersPerPolicyMsgKey),
-		// TODO remove PolicyComplianceMsgKey entry after removing it from datatypes
-		fmt.Sprintf("%s.%s", leafHubName, datatypes.PolicyComplianceMsgKey),
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.PolicyCompleteComplianceMsgKey),
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.PolicyDeltaComplianceMsgKey),
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.MinimalPolicyComplianceMsgKey),
 		fmt.Sprintf("%s.%s", leafHubName, datatypes.ControlInfoMsgKey),
+		fmt.Sprintf("%s.%s", leafHubName, datatypes.LocalPlacementRulesMsgKey),
+		fmt.Sprintf("%s.%s", leafHubName, datatypes.LocalClustersPerPolicyMsgKey),
+		fmt.Sprintf("%s.%s", leafHubName, datatypes.LocalPolicyCompleteComplianceMsgKey),
+		fmt.Sprintf("%s.%s", leafHubName, datatypes.LocalPolicySpecMsgKey),
 	}
 
 	for _, objectID := range objectIDs {
