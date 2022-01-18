@@ -16,7 +16,7 @@ Go to the [Contributing guide](CONTRIBUTING.md) to learn how to get involved.
 
 ### Cloud Sync Service (CSS)
 
-#### Deploy CSS on Hub of Hubs
+#### Deploy CSS on Hub of Hubs cluster
 
 1.  Set the `CSS_PORT` environment variable to hold the CSS port to be used internally in the cluster.
     ```
@@ -30,7 +30,7 @@ Go to the [Contributing guide](CONTRIBUTING.md) to learn how to get involved.
     
 edge-sync-service CSS k8s objects will be created under the namespace `sync-service`.
 
-#### Cleanup of CSS from Hub of Hubs
+#### Cleanup of CSS from Hub of Hubs cluster
     
 1.  Run the following command to clean the CSS from your Hub of Hubs cluster:  
     ```
@@ -39,7 +39,7 @@ edge-sync-service CSS k8s objects will be created under the namespace `sync-serv
 
 ### Edge Sync Service (ESS)
 
-#### Deploy ESS on a leaf hub
+#### Deploy ESS on a leaf hub cluster
 
 1.  Set the `CSS_HOST` environment variable to hold the CSS host.
     ```
@@ -68,7 +68,7 @@ edge-sync-service CSS k8s objects will be created under the namespace `sync-serv
     
 edge-sync-service ESS k8s objects will be created under the namespace `sync-service`.
     
-#### Cleanup of ESS from a leaf hub
+#### Cleanup of ESS from a leaf hub cluster
     
 1.  Run the following command to clean the ESS from your leaf hub cluster:  
     ```
