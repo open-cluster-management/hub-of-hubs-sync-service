@@ -14,6 +14,29 @@ Go to the [Contributing guide](CONTRIBUTING.md) to learn how to get involved.
 
 ## Getting Started
 
+### Cloud Sync Service (CSS)
+
+#### Deploy CSS on Hub of Hubs
+
+1.  Set the `CSS_PORT` environment variable to hold the CSS port to be used internally in the cluster.
+    ```
+    $ export CSS_PORT=...
+    ```
+    
+1.  Run the following command to deploy the CSS to your Hub of Hubs cluster:  
+    ```
+    envsubst < css/css.yaml.template | kubectl apply -f -
+    ```
+    
+edge-sync-service CSS k8s objects will be created under the namespace `sync-service`.
+
+#### Cleanup of CSS from Hub of Hubs
+    
+1.  Run the following command to clean the CSS from your Hub of Hubs cluster:  
+    ```
+    envsubst < css/css.yaml.template | kubectl delete -f -
+    ``` 
+
 ### Edge Sync Service (ESS)
 
 #### Deploy ESS on a leaf hub
