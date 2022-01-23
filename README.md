@@ -1,6 +1,5 @@
 # Hub-of-Hubs-sync-service
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/stolostron/hub-of-hubs-sync-service)](https://goreportcard.com/report/github.com/stolostron/hub-of-hubs-sync-service)
 [![License](https://img.shields.io/github/license/stolostron/hub-of-hubs-sync-service)](/LICENSE)
 
 This repository contains instructions for how to deploy 
