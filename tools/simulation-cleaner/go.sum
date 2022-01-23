@@ -1,8 +1,8 @@
 github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b h1:VKtxabqXZkF25pY9ekfRL6a582T4P37/31XEstQ5p58=
 github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b/go.mod h1:SBH7ygxi8pfUlaOkMMuAQtPIUF8ecWP5IEl/CR7VP2Q=
-github.com/open-cluster-management/hub-of-hubs-data-types v0.3.0 h1:4Wi5fhF0s1bhXZM/fyZGgeyhQFNfN8vZM2yboqnz+3s=
-github.com/open-cluster-management/hub-of-hubs-data-types v0.3.0/go.mod h1:YFY7Y2Qvk3vRHr9cXkF1VAwbxQ72S7+m3Q9JhN+7Xvg=
 github.com/open-horizon/edge-sync-service-client v0.0.0-20190711093406-dc3a19905da2 h1:ZmX/tuCgFVbe07pqObNWf14cAYpHN8gVRSkWnbtSUW4=
 github.com/open-horizon/edge-sync-service-client v0.0.0-20190711093406-dc3a19905da2/go.mod h1:rKW01VtqwtwaUQ+zkJ80X5EeGqsTblQE4J9HxPUtTAQ=
 github.com/open-horizon/edge-utilities v0.0.0-20190711093331-0908b45a7152 h1:YEvNOMo3ANOQ3AwsU0cCcBA4nKHDLUlyUCRWk5rBf68=
 github.com/open-horizon/edge-utilities v0.0.0-20190711093331-0908b45a7152/go.mod h1:YCsJWhuG0VERquI0geFKoneCSOVAyMdSmylGz5OlZdE=
+github.com/stolostron/hub-of-hubs-data-types v0.3.1 h1:kw7FAQoxqJKKOwMByYRqn0eZXdtdYsz5O0Ra842Pq9c=
+github.com/stolostron/hub-of-hubs-data-types v0.3.1/go.mod h1:TBfuHiBN/KAEOR+8MB61NVfMLTsUAUaEBWtxA+ARYyY=

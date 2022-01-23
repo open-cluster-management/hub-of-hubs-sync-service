@@ -7,8 +7,8 @@ import (
 	"os"
 	"strconv"
 
-	datatypes "github.com/open-cluster-management/hub-of-hubs-data-types"
 	"github.com/open-horizon/edge-sync-service-client/client"
+	datatypes "github.com/stolostron/hub-of-hubs-data-types"
 )
 
 const (

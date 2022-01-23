@@ -3,7 +3,7 @@ module simulation-cleaner
 go 1.17
 
 require (
-	github.com/open-cluster-management/hub-of-hubs-data-types v0.3.0
+	github.com/stolostron/hub-of-hubs-data-types v0.3.1
 	github.com/open-horizon/edge-sync-service-client v0.0.0-20190711093406-dc3a19905da2
 )
 
